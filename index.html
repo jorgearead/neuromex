@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="./assets/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <title>Neuromex</title>
+</head>
+
+<body class="">
+    <header>
+        <nav id="menuPrincipal">
+            <a href="#"><img src="./img/logo-neuromex.png" class="logo" alt=""></a>
+
+            <ul>
+                <li><label class="fas fa-sun tema" id="tema"></label></li>
+                <!--li><span class="fas fa-moon tema"></span></li-->
+                <li><a class="active" href="./vistas/tienda.html">Tienda</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Membresia</a></li>
+                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Carrito</a></li>
+            </ul>
+            <label id="icon">
+                <i class="fas fa-list-alt tema" id="tema"></i>
+            </label>
+        </nav>
+        <section class="has-dflex-center">
+            <div class="lx-container-80">
+                <div class="lx-row">
+                    <div class="lx-card carousel-container">
+                        <div class="item fade">
+                            <div class="image"><img src="https://bit.ly/34xczKy" /></div>
+                            <div class="text is-text-left">
+                                <h1 class="title"> <i class="far fa-hand-point-right"></i>&nbsp;This item has a title.</h1>
+                                <p>This item has a caption, aligned to the left.</p>
+                            </div>
+                        </div>
+                        <div class="item fade">
+                            <div class="image"><img src="https://bit.ly/3lkp5DW" /></div>
+                            <div class="text is-text-left">
+                                <h1 class="title"> <i class="far fa-hand-point-right"></i>&nbsp;This item has a title.</h1>
+                                <p>This item has a caption, aligned to the left.</p>
+                            </div>
+                        </div>
+                        <div class="item fade">
+                            <div class="image"><img src="https://bit.ly/3iMHuI1" /></div>
+                            <div class="text is-text-centered">
+                                <h1 class="title"> <i class="far fa-hand-point-right"></i>&nbsp;This item has a title.</h1>
+                                <p> <i class="fas fa-info-circle"></i>&nbsp;This item has a caption, aligned to the center.</p>
+                            </div>
+                        </div>
+                        <a class="prev has-dflex-center">
+                            <svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg>
+                        </a>
+                        <a class="next has-dflex-center">
+                            <svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="" id="contenido">
+        <div class="titulos">
+            <h2 class="titulo" id="titulo">Categorias</h2>
+            <br>
+            <hr class="separador">
+            <br>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/arduino.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microcontroladores</h1>
+            </div>
+            <div class="back">
+                <h2>Arduino</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/raspberry.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microporcesadores</h1>
+            </div>
+            <div class="back">
+                <h2>Raspberry</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/electronica.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Electronica</h1>
+            </div>
+            <div class="back">
+                <h2>Leds, resistencias, etc.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/herramientas.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Herramienta</h1>
+            </div>
+            <div class="back">
+                <h2>Multimetro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/arduino.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microcontroladores</h1>
+            </div>
+            <div class="back">
+                <h2>Arduino</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/raspberry.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microporcesadores</h1>
+            </div>
+            <div class="back">
+                <h2>Raspberry</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/electronica.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Electronica</h1>
+            </div>
+            <div class="back">
+                <h2>Leds, resistencias, etc.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/herramientas.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Herramienta</h1>
+            </div>
+            <div class="back">
+                <h2>Multimetro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/arduino.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microcontroladores</h1>
+            </div>
+            <div class="back">
+                <h2>Arduino</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/raspberry.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Microporcesadores</h1>
+            </div>
+            <div class="back">
+                <h2>Raspberry</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/electronica.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Electronica</h1>
+            </div>
+            <div class="back">
+                <h2>Leds, resistencias, etc.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="front" style="background-image: url('img/categorias/herramientas.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')">
+                <h1 class="text-shadow">Herramienta</h1>
+            </div>
+            <div class="back">
+                <h2>Multimetro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, pariatur nemo! Architecto animi illum voluptate veniam. Vitae suscipit voluptatem voluptates!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-conte">
+            <div class="aviso">Visita nuestro aviso de <a href="">privacidad</a>.</div>
+            <nav class="redes">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></label></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </nav>
+            <div class="dere-reser">Copyright &#169; Neuromex.</div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <!--script src="http://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script-->
+</body>
+
+</html>

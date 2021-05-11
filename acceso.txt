@@ -1,0 +1,41 @@
+
+plesk:https://www.neuromex.com.mx:8443/smb/web/view
+Usuario: neuromex
+Password: 14zFxP8WALb+msfD28KX1rMa9BUDLvmP4B0PBmXjReHzcw==
+
+
+Wordpress:https://neuromex.com.mx/wp-admin/
+user:neuromex
+Cont:6vhQ17QbqrcmiR&v
+
+wordpress:https://comunidad.neuromex.com.mx/wp-login.php
+user: neuromexMembresia
+pass: ia699ssuQI4^akc&
+
+
+Correos.
+email:admin@neuromex.com.mx
+pass:65Md%fn0
+
+Correo
+karielgranados@neuromex.com.mx
+k&0pQ49s
+
+
+Correo
+jorge.arellano@neuromex.com.mx
+N5~77kac
+
+
+Correo
+info@neuromex.com.mx
+74Mu1ao~
+
+Youtube/Gmail
+neuromexjk@gmail.com
+74Mu1ao~
+
+Tik-Tok
+cosas-de-ingenieros@hotmail.com
+nueroMex2021@
+

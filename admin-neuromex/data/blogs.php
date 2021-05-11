@@ -1,0 +1,3 @@
+<?php
+$BS = $DATA->Blogs();
+?>

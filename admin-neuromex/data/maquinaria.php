@@ -1,0 +1,5 @@
+<?php
+
+$MS = $DATA->Maquinaria();
+
+?>
