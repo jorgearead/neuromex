@@ -9,8 +9,8 @@
 	$users = new Usuario($DB);
 
 	$user = $_POST['email'];
-	//$pass = md5($_POST['password']);
-	$pass = $_POST['password'];
+	$pass = md5($_POST['password']);
+	//$pass = $_POST['password'];
 	$login = $users->login( $user, $pass );
 
 	if( count($login) == 0 ) {

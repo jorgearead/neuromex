@@ -13,7 +13,7 @@
 	$error = array('success'=>false,'title'=>'Error!','msg'=>'Ocurrió un error, inténtelo más tarde.','class'=>'error');
 
 	$_valores['user_name']	= $_POST['name'];
-  $_valores['user_mail']	= $_POST['sesion'];
+  	$_valores['user_mail']	= $_POST['sesion'];
 	$_valores['user_pass']	= md5($_POST['contra']);
 
 	if ( $users->insert($_valores) ) echo json_encode($hecho);
