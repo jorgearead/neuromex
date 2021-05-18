@@ -4,7 +4,7 @@ $(function() {
         data: { id: id },
         type: "GET",
         success: function(response) {
-            $("input[name='id']").val(response.marca_id);
+            $("input[name='id']").val(response.trademarck_id);
             $("input[name='name']").val(fromHTML(response.name));
             $("input[name='orden']").val(response.orden);
             $("input[type='file']").fileinput({

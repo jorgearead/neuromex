@@ -33,11 +33,6 @@
                   <input type="file" name="logo">
                 </div>
               </div>
-              <!--div class="col-md-9">
-                <div class="form-group">
-                  <textarea name="contenido" class="ckeditor"></textarea>
-                </div>
-              </div-->
 
             </div>
           </div>

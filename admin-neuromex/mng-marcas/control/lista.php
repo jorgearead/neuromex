@@ -22,7 +22,7 @@
   	$SEARCH = $MARCA->SanitizarTexto($_GET['search']['value']);
 
 	// Parametros de búsqueda
-	$WHERE = " name LIKE '%{$SEARCH}%' ";//ORDER BY order
+	$WHERE = " trademarck_name LIKE '%{$SEARCH}%' ";//ORDER BY order
 	$ORDER = " {$SORT} {$DIR} ";
 	$LIMIT = " {$START},{$ROWS} ";
 
@@ -37,18 +37,18 @@
 
 	$DATA = array();
 	foreach ( $RESULTADOS as $R ) {
-		if(!empty($R['logo'])){
-			$img = $R['logo'];
+		if(!empty($R['trademarck_logo'])){
+			$img = $R['trademarck_logo'];
 		}else{
 			$img = "img_relleno.png";
 		}
 		$OPC = "";
-		$OPC.= '<a href="./editar.php?id='.$R['marca_id'].'"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;';
-		$OPC.= '<i class="fa fa-trash-o del" data-id="'.$R['marca_id'].'"></i>';
+		$OPC.= '<a href="./editar.php?id='.$R['trademarck_id'].'"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;';
+		$OPC.= '<i class="fa fa-trash-o del" data-id="'.$R['trademarck_id'].'"></i>';
 
     $DATA[] = array (
-			"marca"	=> $R['name'],
-			"orden"	=> $R['orden'],
+			"marca"	=> $R['trademarck_name'],
+			"orden"	=> $R['trademarck_orden'],
 			"logo"	=> '<img src="../../img/marcas/'.$img.'" width="200px">',
 			"opciones"	=> $OPC
 		);

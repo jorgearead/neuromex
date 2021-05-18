@@ -17,7 +17,7 @@
 	$ERRGN = array('success'=>false,'title'=>'¡Error!','msg'=>'Ocurrió un error, inténtelo más tarde.','class'=>'error');
 
   if ( $MARCA->delete( $ID ) ) {
-		if ( file_exists($DIR.$C['logo']) ) unlink($DIR.$C['logo']);
+		if ( file_exists($DIR.$C['trademarck_logo']) ) unlink($DIR.$C['trademarck_logo']);
 		echo json_encode( $LISTO );
 	} else echo json_encode( $ERRGN );
 

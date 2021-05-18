@@ -17,15 +17,15 @@
 	$DIR = "../../../img/marcas/";
 	$URL = $MARCA->makeURL( $_POST['name'] );
 
-	$_INS['name']	= $MARCA->SanitizarTexto( $_POST['name'] );
-	$_INS['logo']	= $_POST['logo'];
-	$_INS['orden']	= $MARCA->getNextPosition();
-	$_INS['url'] 	= $URL;
+	$_INS['trademarck_name']	= $MARCA->SanitizarTexto( $_POST['name'] );
+	//$_INS['trademarck_logo']	= $_POST['logo'];
+	$_INS['trademarck_orden']	= $MARCA->getNextPosition();
+	$_INS['trademarck_url'] 	= $URL;
 
 	if ( $_FILES['logo']['error'] == 0 ) {
-		$IMG = "pillar-".$URL."-".$MARCA->makeURLFILE($_FILES['logo']['name']);
+		$IMG = "neuromex-".$MARCA->makeURLFILE($_FILES['logo']['name']);
 		move_uploaded_file($_FILES['logo']['tmp_name'],$DIR.$IMG);
-		$_INS['logo'] = $IMG;
+		$_INS['trademarck_logo'] = $IMG;
 	} else {
 		$DB->Rollback();
 		$ERRFI['msg'] = $MARCA->getFileErrorMSG($_FILES['name']['error']);

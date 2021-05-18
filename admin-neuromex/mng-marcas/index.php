@@ -18,7 +18,6 @@
                 <th>Marca</th>
                 <th>Orden</th>
                 <th>Logo</th>
-                <!--th><i class="fa fa-star"></i></th-->
                 <th></th>
               </tr>
             </thead>

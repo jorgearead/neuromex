@@ -10,9 +10,9 @@ var tabla = $('#resultados').DataTable({
     stateSaveCallback: function(settings, data) { localStorage.setItem('DataTables_' + settings.sInstance, JSON.stringify(data)) },
     stateLoadCallback: function(settings) { return JSON.parse(localStorage.getItem('DataTables_' + settings.sInstance)) },
     columns: [
-        { data: 'marca', name: "name" },
-        { data: 'orden', name: "orden" },
-        { data: 'logo', name: "logo" },
+        { data: 'marca', name: "trademarck_name" },
+        { data: 'orden', name: "trademarck_orden" },
+        { data: 'logo', name: "trademarck_logo" },
         { data: 'opciones', searchable: false, orderable: false },
     ],
     language: {

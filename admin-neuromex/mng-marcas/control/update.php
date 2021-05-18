@@ -17,26 +17,26 @@
 	$DIR 		 = "../../../img/marcas/";
 	$ID 		 = $_POST['id'];
 	$URL 		 = $MARCA->makeURL( $_POST['name'] );
-	$_UPD['url'] = $URL;
-	$_UPD['name']= $MARCA->SanitizarTexto( $_POST['name'] );
+	$_UPD['trademarck_url'] = $URL;
+	$_UPD['trademarck_name']= $MARCA->SanitizarTexto( $_POST['name'] );
 
 	$P = $MARCA->getById($ID);
 	$PF	= $_POST['orden'];
 
-	if ($PF == $P['orden'] ) {
+	if ($PF == $P['trademarck_orden'] ) {
 		echo json_encode( $nulo );
 		die;
-	  } elseif ($PF < $P['orden'] ) {
-		$MARCA->RecorrerLugarUP($PF , $P['orden']);
+	  } elseif ($PF < $P['trademarck_orden'] ) {
+		$MARCA->RecorrerLugarUP($PF , $P['trademarck_orden']);
 	  } else {
-		$MARCA->RecorrerLugarDOWN($PF , $P['orden']);
+		$MARCA->RecorrerLugarDOWN($PF , $P['trademarck_orden']);
 	  }
-	$_UPD['orden'] = $PF;
+	$_UPD['trademarck_orden'] = $PF;
 
 	if ( $_FILES['logo']['error'] == 0 ) {
-		$IMG = "pillar-".$URL."-".$MARCA->makeURLFILE($_FILES['logo']['name']);
+		$IMG = "neuromex-".$URL."-".$MARCA->makeURLFILE($_FILES['logo']['name']);
 		move_uploaded_file($_FILES['logo']['tmp_name'],$DIR.$IMG);
-		$_UPD['logo'] = $IMG;
+		$_UPD['trademarck_logo'] = $IMG;
 	} else if ( $_FILES['logo']['error'] != 4 ) {
 		$DB->Rollback();
 		$ERRFI['msg'] = $MARCA->getFileErrorMSG($_FILES['logo']['error']);
