@@ -59,19 +59,34 @@
             <h3 class="menu-title">Contenido</h3>
 
             <li <?php if($MOD == "mng-home" ):?>class="active"<?php endif; ?>>
-              <a href="<?=$URLBASE?>mng-home"><i class="menu-icon fa fa-tachometer"></i>&nbsp;&nbsp;Home</a>
+              <a href="<?=$URLBASE?>mng-home"><i class="menu-icon fa fa-home"></i>&nbsp;&nbsp;Home</a>
             </li>
             <li <?php if($MOD == "mng-aviso" ):?>class="active"<?php endif; ?>>
-              <a href="<?=$URLBASE?>mng-aviso"><i class="menu-icon fa fa-lock"></i>&nbsp;&nbsp;Aviso de privacidad</a>
+              <a href="<?=$URLBASE?>mng-aviso"><i class="menu-icon fa fa-copyright"></i>&nbsp;&nbsp;Aviso de privacidad</a>
             </li>
             <li <?php if($MOD == "mng-marcas" ):?>class="active"<?php endif; ?>>
-              <a href="<?=$URLBASE?>mng-marcas"><i class="menu-icon fa fa-globe"></i>&nbsp;&nbsp;Marcas</a>
+              <a href="<?=$URLBASE?>mng-marcas"><i class="menu-icon fa fa-trademark"></i>&nbsp;&nbsp;Marcas</a>
             </li>
             <li <?php if($MOD == "mng-categorias" ):?>class="active"<?php endif; ?>>
-              <a href="<?=$URLBASE?>mng-categorias"><i class="menu-icon fa fa-th-large"></i>&nbsp;&nbsp;Categor&iacute;as de productos</a>
+              <a href="<?=$URLBASE?>mng-categorias"><i class="menu-icon fa fa-sitemap"></i>&nbsp;&nbsp;Categor&iacute;as de productos</a>
             </li>
             <li <?php if($MOD == "mng-productos" ):?>class="active"<?php endif; ?>>
               <a href="<?=$URLBASE?>mng-productos"><i class="menu-icon fa fa-shopping-cart"></i>&nbsp;&nbsp;Productos</a>
+            </li>
+            <li <?php if($MOD == "mng-membresias" ):?>class="active"<?php endif; ?>>
+              <a href="<?=$URLBASE?>mng-membresias"><i class="menu-icon fa fa-id-card-o"></i>&nbsp;&nbsp;Membresias</a>
+            </li>
+
+            <h3 class="menu-title">Administraci&oacute;n</h3>
+
+            <li <?php if($MOD == "mng-miembros" ):?>class="active"<?php endif; ?>>
+              <a href="<?=$URLBASE?>mng-miembros"><i class="menu-icon fa fa-universal-access"></i>&nbsp;&nbsp;Miembros</a>
+            </li>
+            <li <?php if($MOD == "mng-ventas" ):?>class="active"<?php endif; ?>>
+              <a href="<?=$URLBASE?>mng-ventas"><i class="menu-icon fa fa-bar-chart"></i>&nbsp;&nbsp;Ventas</a>
+            </li>
+            <li <?php if($MOD == "mng-pedidos" ):?>class="active"<?php endif; ?>>
+              <a href="<?=$URLBASE?>mng-pedidos"><i class="menu-icon fa fa-shopping-basket"></i>&nbsp;&nbsp;Pedidos</a>
             </li>
 
           </ul>
