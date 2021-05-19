@@ -18,16 +18,16 @@ $nulo = array('success'=>true,'title'=>'Nada por hacer!','msg'=>'La posición no
 
 $P = $CATES->getById($ID);
 
-if ($PF == $P['orden'] ) {
+if ($PF == $P['pc_orden'] ) {
   echo json_encode( $nulo );
   die;
-} elseif ($PF < $P['orden'] ) {
-  $CATES->RecorrerLugarUP($PF , $P['orden'], $P['depende']);
+} elseif ($PF < $P['pc_orden'] ) {
+  $CATES->RecorrerLugarUP($PF , $P['pc_orden'], $P['pc_depende']);
 } else {
-  $CATES->RecorrerLugarDOWN($PF , $P['orden'], $P['depende']);
+  $CATES->RecorrerLugarDOWN($PF , $P['pc_orden'], $P['pc_depende']);
 }
 
-$_UPDT['orden'] = $PF;
+$_UPDT['pc_orden'] = $PF;
 if ($CATES->update($_UPDT, $ID) ) echo json_encode( $hecho );
 else echo json_encode( $error );
 

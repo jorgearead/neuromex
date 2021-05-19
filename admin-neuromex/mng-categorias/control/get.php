@@ -11,9 +11,9 @@ $CATES = new Categoria($DB);
 $ID = $_GET['id'];
 $CAT = $CATES->getById($ID);
 
-if ($CAT['nivel'] == 2) {
-	$PADRE = $CATES->getById($CAT['depende']);
-	$CAT['depende2'] = $PADRE['depende'];
+if ($CAT['pc_nivel'] == 2) {
+  $PADRE = $CATES->getById($CAT['pc_depende']);
+  $CAT['depende2'] = $PADRE['pc_depende'];
 }
 
 echo json_encode($CAT);

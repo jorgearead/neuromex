@@ -16,18 +16,18 @@ $ERRFI = array('success'=>false,'title'=>'Error!','msg'=>'Ocurrió un error al s
 $_INS = array();
 $URL = $CATES->makeURL( $_POST['nombre'] );
 
-$_INS['nombre']	= $CATES->SanitizarTexto( $_POST['nombre'] );
-$_INS['url']		= $URL;
+$_INS['pc_nombre'] = $CATES->SanitizarTexto( $_POST['nombre'] );
+$_INS['pc_url'] = $URL;
 
 if ( $_POST['subcat'] != 0 ) {
-	$_INS['depende'] = $_POST['subcat'];
-	$_INS['nivel'] = 2;
+  $_INS['pc_depende'] = $_POST['subcat'];
+  $_INS['pc_nivel'] = 2;
 } else if ( $_POST['cat'] != 0 ) {
-	$_INS['depende'] = $_POST['cat'];
-	$_INS['nivel'] = 1;
+  $_INS['pc_depende'] = $_POST['cat'];
+  $_INS['pc_nivel'] = 1;
 } else {
-	$_INS['depende'] = $_POST['cat'];
-	$_INS['nivel'] = 0;
+  $_INS['pc_depende'] = $_POST['cat'];
+  $_INS['pc_nivel'] = 0;
 }
 
 if ( $CATES->update( $_INS, $ID ) ) echo json_encode( $LISTO );
