@@ -18,8 +18,7 @@
                 <thead class="thead-dark text-center">
                   <tr>
                     <th>Texto</th>
-                    <th>Escritorio</th>
-                    <th>Mobile</th>
+                    <th>Imagen</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -39,21 +38,19 @@
               <div class="card-body">
 
                 <div class="form-group">
+                  <label>T&iacute;tulo</label>
+                  <input type="text" class="form-control" name="titulo" data-regla="texto" data-msg="Revise su texto">
+                </div>
+
+                <div class="form-group">
                   <label>Texto corto</label>
-                  <span class="badge badge-warning">M&aacute;x. 200 caracteres</span>
-                  <input type="text" class="form-control" name="texto" data-regla="texto" data-msg="Revise su texto">
+                  <textarea class="form-control" name="texto" rows="3" required></textarea>
                 </div>
 
                 <div class="form-group">
-                  <label>Imagen para escritorio</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 1920 x 600 px</span>
-                  <input type="file" name="desk" required>
-                </div>
-
-                <div class="form-group">
-                  <label>Imagen para m&oacute;viles</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 400 x 615 px</span>
-                  <input type="file" name="mobile" required>
+                  <label>Imagen</label>&nbsp;&nbsp;
+                  <span class="badge badge-warning">Medidas de 1900 x 600 px</span>
+                  <input type="file" name="imagen" required>
                 </div>
 
               </div>
@@ -72,20 +69,19 @@
 
                 <input type="hidden" name="id" required>
                 <div class="form-group">
-                  <label>Texto corto</label>
-                  <span class="badge badge-warning">M&aacute;x. 200 caracteres</span>
-                  <input type="text" class="form-control" name="texto" data-regla="texto" data-msg="Revise su texto">
+                  <label>T&iacute;tulo</label>
+                  <input type="text" class="form-control" name="titulo" data-regla="texto" data-msg="Revise su texto">
                 </div>
 
                 <div class="form-group">
-                  <label>Imagen de slider</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 1920 x 600 px</span>
-                  <input type="file" name="desk">
+                  <label>Texto corto</label>
+                  <textarea class="form-control" rows="3" name="texto" required></textarea>
                 </div>
+
                 <div class="form-group">
-                  <label>Imagen de slider</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 400 x 615 px</span>
-                  <input type="file" name="mobile">
+                  <label>Imagen</label>&nbsp;&nbsp;
+                  <span class="badge badge-warning">Medidas de 1900 x 600 px</span>
+                  <input type="file" name="imagen">
                 </div>
 
               </div>
@@ -105,8 +101,8 @@
 
   <script src="<?=$URLBASE?>vendors/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="<?=$URLBASE?>vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-	<script src="<?=$URLBASE?>vendors/fileinput/js/fileinput.js" type="text/javascript"></script>
-	<script src="<?=$URLBASE?>vendors/fileinput/js/locales/es.js" type="text/javascript"></script>
+  <script src="<?=$URLBASE?>vendors/fileinput/js/fileinput.js" type="text/javascript"></script>
+  <script src="<?=$URLBASE?>vendors/fileinput/js/locales/es.js" type="text/javascript"></script>
   <script src="<?=$URLBASE?>js/formularios.js"></script>
   <script src="./js/index.js"></script>
 
