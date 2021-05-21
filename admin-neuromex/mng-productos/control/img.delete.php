@@ -13,7 +13,7 @@ $ID = $_POST['key'];
 $S = $SLIDER->getById($ID);
 
 if ( $SLIDER->delete($ID) ) {
-  if ( file_exists($DIR.$S['sp_imagen']) ) unlink($DIR.$S['sp_imagen']);
+  if ( file_exists($DIR.$S['ps_imagen']) ) unlink($DIR.$S['ps_imagen']);
   echo "1";
 } else {
   echo "0";
