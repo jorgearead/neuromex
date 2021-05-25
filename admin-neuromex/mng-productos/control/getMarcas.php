@@ -14,7 +14,7 @@ $RET = "";
 
 $RET .= '<option value="">Seleccione Marca</option>';
 foreach ($MARCAS as $C) {
-  $RET .= '<option value="'.$C['marca_id'].'">'.$C['marca_name'].'</option>';
+  $RET .= '<option value="'.$C['trademarck_id'].'">'.$C['trademarck_name'].'</option>';
 }
 
 echo $RET;

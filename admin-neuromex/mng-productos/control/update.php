@@ -29,7 +29,7 @@
   $_UPD['prod_nombre'] = $PRODUCTOS->SanitizarTexto( $_POST['nombre'] );
   $_UPD['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
   $_UPD['prod_descripcion'] = $_POST['contenido'];
-  $_UPD['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
+  //$_UPD['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
   $_UPD['prod_marca'] = $_POST['marca'];
   $_UPD['prod_categoria'] = array_pop($_POST['categoria']);
   $_UPD['prod_url'] = $URL;

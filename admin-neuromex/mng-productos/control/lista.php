@@ -21,14 +21,14 @@ $DIR = $_GET['order'][0]['dir'];
 $SEARCH = $_GET['search']['value'];
 
 if ( $SEARCH != null && $SEARCH != "" ) {
-  $WHERE .= " ( prod_nombre LIKE '{$SEARCH}%' OR marca_name LIKE '{$SEARCH}%' OR pc_nombre LIKE '{$SEARCH}%' ) ";
+  $WHERE .= " ( prod_name LIKE '{$SEARCH}%' OR prod_trademark LIKE '%{$SEARCH}%' ) ";
 } else {
   $WHERE .= " 1 ";
 }
 
 //JOIN con categorias
-$JOIN .= " INNER JOIN tbl_producto_categorias ON prod_categoria = pc_id ";
-$JOIN .= " INNER JOIN tbl_marcas ON prod_marca = marca_id ";
+$JOIN .= " INNER JOIN tbl_producto_categorias ON prod_cat = pc_id ";
+$JOIN .= " INNER JOIN tbl_trademarck ON prod_trademark = trademarck_id ";
 
 $ORDER = " {$SORT} {$DIR} ";
 $LIMIT = " {$START},{$ROWS} ";
@@ -46,7 +46,7 @@ $DATA = array();
 foreach ( $RESULTADOS as $R ) {
 
   //Construir categorias
-  $CATS = $PRODUCTO->getCategorias($R['prod_categoria']);
+  $CATS = $PRODUCTO->getCategorias($R['prod_cat']);
   $CATES = implode("->",$CATS);
 
   $OPC = "";
@@ -54,9 +54,12 @@ foreach ( $RESULTADOS as $R ) {
   $OPC.= '<i class="fa fa-trash-o" data-id="'.$R['prod_id'].'"></i>';
 
   $DATA[] = array (
-    "producto"  => $R['prod_nombre'],
+    "producto"  => $R['prod_name'],
     "categoria" => $CATES,
-    "marca" => $R['marca_name'],
+    "marca" => $R['trademarck_name'],
+    "precio"  => $R['prod_price'],
+    "oferta"  => $R['prod_offer_price'],
+    "renta"  => $R['prod_rent'],
     "opciones"  => $OPC
   );
 

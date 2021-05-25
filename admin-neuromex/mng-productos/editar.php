@@ -39,10 +39,10 @@
                       <label class="required">Resumen</label>
                       <input type="text" class="form-control" name="resumen" data-regla="texto" data-msg="Ingresar un nombre de producto válido" required>
                     </div>
-                    <div class="form-group">
-                    <label>Video</label>&nbsp;&nbsp;<span class="badge badge-danger">URL de youtube</span>
+                    <!--div class="form-group">
+                      <label>Video</label>&nbsp;&nbsp;<span class="badge badge-danger">URL de youtube</span>
                       <input type="text" class="form-control" name="video" data-regla="web" data-msg="Ingresar una URL de YouTube válida.">
-                    </div>
+                    </div-->
                     <div class="form-group">
                       <label class="required">Marca</label>
                       <select class="form-control" name="marca" required></select>
@@ -52,17 +52,17 @@
                       <select class="form-control" name="categoria[]" required></select>
                     </div>
                     <div class="form-group">
-                      <label>Imagen de caracter&iacute;sticas</label>&nbsp;
+                      <label>Imagen principal del producto</label>&nbsp;
                       <label class="badge badge-success">Imagen</label>
-                      <label class="badge badge-warning">1300 x 850 px</label>
+                      <label class="badge badge-warning">250 x 200 px</label>
                       <input type="file" name="caracteristicas">
                     </div>
-                    <div class="form-group">
+                    <!--div class="form-group">
                       <label>Diagrama de uso</label>&nbsp;
                       <label class="badge badge-success">Imagen</label>
                       <label class="badge badge-warning">1300 x 850 px</label>
                       <input type="file" name="diagrama">
-                    </div>
+                    </div-->
                   </div>
 
                   <div class="col-md-7">
@@ -83,6 +83,7 @@
                       <tbody></tbody>
                     </table>
                   </div>
+
                   <div class="col-md-6">
                     <div id="documentos">
                       <h4>
@@ -91,7 +92,6 @@
                       </h4>
                     </div>
                   </div>
-
 
                   <div class="col-md-12">
                     <div class="form-group">

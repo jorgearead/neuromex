@@ -18,6 +18,9 @@
                 <th>Producto</th>
                 <th>Categor&iacute;a</th>
                 <th>Marca</th>
+                <th>Precio</th>
+                <th>Oferta</th>
+                <th>Renta</th>
                 <th></th>
               </tr>
             </thead>

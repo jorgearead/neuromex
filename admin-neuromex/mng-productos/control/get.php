@@ -37,7 +37,7 @@ $_RETURN = array (
 );
 
 $_CATES = [];
-$CAT = $P['prod_categoria'];
+$CAT = $P['prod_cat'];
 array_push($_CATES,$CAT);
 
 while ( $CAT != 0 ) {
