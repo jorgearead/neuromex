@@ -58,12 +58,18 @@
                       <!--label class="required w-50">Disponible al publico</label>
                       <input type="checkbox" class="form-control w-25" name="disponible" required-->
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="disponible" value="1" checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Disponible al publico</label>
+                        <select name="disponible" >
+                            <option value="1">Disponible</option>
+                            <option value="0">No disponible</option>
+                        </select>
                       </div>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renta" value="1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Disponible para renta</label>
+                        <select name="renta" >
+                            <option value="1">Disponible</option>
+                            <option value="0">No disponible</option>
+                        </select>
                       </div>
                       
                     </div>

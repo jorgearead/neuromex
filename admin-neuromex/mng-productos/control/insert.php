@@ -34,18 +34,13 @@
   $_INS['prod_color'] = $_POST['color'];
   $_INS['prod_size'] = $_POST['tamano'];
   $_INS['prod_stock'] = $_POST['stock'];
-  //$_INS['prod_status'] = $_POST['disponible'];//checkbox
-  //$_INS['prod_rent'] = $_POST['renta'];//checkbox
+  $_INS['prod_status'] = $_POST['disponible'];//checkbox
+  $_INS['prod_rent'] = $_POST['renta'];//checkbox
   $_INS['prod_mem_price'] = $_POST['miembros'];
   $_INS['prod_url'] = $URL;
   //$_INS['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
   //$_INS['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
-  if($_POST['disponible'] != null){
-    $_INS['prod_status'] = 1;
-  }
-  if($_POST['renta'] != null){
-    $_INS['prod_rent'] = 1;
-  }
+
   //Guardar imagen principal del producto
   if ( $_FILES['caracteristicas']['error'] == 0 ) {
     $IMG = "neuromex-".$URL.$PRODUCTOS->getExtension($_FILES['caracteristicas']['name']);
