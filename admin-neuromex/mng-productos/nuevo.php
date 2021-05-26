@@ -31,13 +31,50 @@
                       <input type="text" class="form-control" name="nombre" data-regla="numletras" data-msg="Ingresar un nombre de producto válido" required>
                     </div>
                     <div class="form-group">
+                      <label class="required">Precio</label>
+                      <input type="text" class="form-control" name="precio" data-regla="decimal" data-msg="Ingresar un precio de producto válido" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Precio de oferta</label>
+                      <input type="text" class="form-control" name="oferta" data-regla="decimal" data-msg="Ingresar un precio de producto válido">
+                    </div>
+                    <div class="form-group">
+                      <label>Precio a miembros</label>
+                      <input type="text" class="form-control" name="miembros" data-regla="decimal" data-msg="Ingresar un precio de producto válido">
+                    </div>
+                    <div class="form-group">
+                      <label>Tamaño</label>
+                      <input type="text" class="form-control" name="tamano" data-regla="numletras" data-msg="Ingresar un tamaño del producto válido">
+                    </div>
+                    <div class="form-group">
+                      <label class="required">Color</label>
+                      <input type="text" class="form-control" name="color" data-regla="letras" data-msg="Ingresar un color de producto válido" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="required">Piezas en stock</label>
+                      <input type="number" class="form-control" name="stock" data-regla="entero" data-msg="Ingresar un numero entero valido" required>
+                    </div>
+                    <div class="form-group">
+                      <!--label class="required w-50">Disponible al publico</label>
+                      <input type="checkbox" class="form-control w-25" name="disponible" required-->
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="disponible" value="1" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Disponible al publico</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renta" value="1">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Disponible para renta</label>
+                      </div>
+                      
+                    </div>
+                    <!--div class="form-group">
                       <label class="required">Resumen</label>
                       <input type="text" class="form-control" name="resumen" data-regla="texto" data-msg="Ingresar un nombre de producto válido" required>
                     </div>
                     <div class="form-group">
                     <label>Video</label>&nbsp;&nbsp;<span class="badge badge-danger">URL de youtube</span>
                       <input type="text" class="form-control" name="video" data-regla="web" data-msg="Ingresar una URL de YouTube válida.">
-                    </div>
+                    </div-->
                     <div class="form-group">
                       <label class="required">Marca</label>
                       <select class="form-control" name="marca" required></select>
@@ -47,16 +84,10 @@
                       <select class="form-control" name="categoria[]" required></select>
                     </div>
                     <div class="form-group">
-                      <label>Imagen de caracter&iacute;sticas</label>&nbsp;
+                      <label>Imagen principal del producto</label>&nbsp;
                       <label class="badge badge-success">Imagen</label>
-                      <label class="badge badge-warning">1300 x 850 px</label>
+                      <label class="badge badge-warning">250 x 200 px</label>
                       <input type="file" name="caracteristicas">
-                    </div>
-                    <div class="form-group">
-                      <label>Imagen de diagrama</label>&nbsp;
-                      <label class="badge badge-success">Imagen</label>
-                      <label class="badge badge-warning">1300 x 850 px</label>
-                      <input type="file" name="diagrama">
                     </div>
                     <div id="documentos">
                       <h4>
@@ -68,7 +99,7 @@
 
                   <div class="col-md-7">
                     <div class="form-group">
-                      <label class="required">Contenido</label>
+                      <label class="required">Descripci&oacute;n del producto</label>
                       <textarea name="contenido" class="ckeditor" required></textarea>
                     </div>
                   </div>
@@ -77,7 +108,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label class="required">Slider de imágenes</label>&nbsp;
-                      <span class="badge badge-warning">720px x 720px</span>
+                      <span class="badge badge-warning">250px x 200px</span>
                       <input type="file" name="slider[]" multiple required>
                     </div>
                   </div>
@@ -89,8 +120,8 @@
 
         </div>
       </div>
-    </div><!-- .animated -->
-  </div><!-- .content -->
+    </div>
+  </div>
 
   <script src="<?=$URLBASE?>vendors/ckeditor/ckeditor.js" type="text/javascript"></script>
   <script src="<?=$URLBASE?>vendors/fileinput/js/fileinput.js" type="text/javascript"></script>

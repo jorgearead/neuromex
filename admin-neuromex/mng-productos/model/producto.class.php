@@ -66,8 +66,8 @@ class Producto extends Tabla {
 /*-------------prod_size-------------------*/
 /*-------------prod_stock------------------*/
 /*-------------prod_status-----------------*///Si el producto esta activo en la tienda
-/*-------------prod_offer------------------*///Si el producto esta en oferta
 /*-------------prod_offer_price------------*///El precio de la oferta
 /*-------------prod_rent-------------------*///Si el producto esta en renta
+/*-------------prod_mem_price--------------*
 /*------------------Tabla------------------*/
 ?>

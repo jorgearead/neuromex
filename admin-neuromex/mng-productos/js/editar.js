@@ -21,7 +21,7 @@ $(function() {
                 $("input[name='id']").val(r.prod_id);
                 $("input[name='urlprod']").val(r.prod_url);
                 $("input[name='nombre']").val(fromHTML(r.prod_name));
-                $("input[name='resumen']").val(fromHTML(r.prod_desc));
+                //$("input[name='resumen']").val(fromHTML(r.prod_desc));
                 //$("input[name='video']").val(r.prod_video);
                 $("select[name='marca']").val(r.prod_trademark);
                 $("select[name='categoria[]']").val(response.categorias[0]);

@@ -35,11 +35,11 @@
                       <input type="hidden" name="id" required>
                       <input type="text" class="form-control" name="nombre" data-regla="numletras" data-msg="Ingresar un nombre de producto válido" required>
                     </div>
-                    <div class="form-group">
+                    <!--div class="form-group">
                       <label class="required">Resumen</label>
                       <input type="text" class="form-control" name="resumen" data-regla="texto" data-msg="Ingresar un nombre de producto válido" required>
                     </div>
-                    <!--div class="form-group">
+                    <div class="form-group">
                       <label>Video</label>&nbsp;&nbsp;<span class="badge badge-danger">URL de youtube</span>
                       <input type="text" class="form-control" name="video" data-regla="web" data-msg="Ingresar una URL de YouTube válida.">
                     </div-->
@@ -67,7 +67,7 @@
 
                   <div class="col-md-7">
                     <div class="form-group">
-                      <label class="required">Contenido</label>
+                      <label class="required">Descripci&oacute;n del producto</label>
                       <textarea name="contenido" class="ckeditor" required></textarea>
                     </div>
                   </div>

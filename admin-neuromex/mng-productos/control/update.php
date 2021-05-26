@@ -26,19 +26,19 @@
   $URL = $PRODUCTOS->makeURL( $_POST['nombre'] );
   $ID = $_POST['id'];
 
-  $_UPD['prod_nombre'] = $PRODUCTOS->SanitizarTexto( $_POST['nombre'] );
-  $_UPD['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
-  $_UPD['prod_descripcion'] = $_POST['contenido'];
+  $_UPD['prod_name'] = $PRODUCTOS->SanitizarTexto( $_POST['nombre'] );
+  //$_UPD['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
+  $_UPD['prod_desc'] = $_POST['contenido'];
   //$_UPD['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
-  $_UPD['prod_marca'] = $_POST['marca'];
-  $_UPD['prod_categoria'] = array_pop($_POST['categoria']);
+  $_UPD['prod_trademark'] = $_POST['marca'];
+  $_UPD['prod_cat'] = array_pop($_POST['categoria']);
   $_UPD['prod_url'] = $URL;
 
   //Guardar imagenes de caracteristicas y diagrama de uso
   if ( $_FILES['caracteristicas']['error'] == 0 ) {
-    $IMG = "pillar-caracteristicas-".$URL.$PRODUCTOS->getExtension($_FILES['caracteristicas']['name']);
+    $IMG = "neuromex-".$URL.$PRODUCTOS->getExtension($_FILES['caracteristicas']['name']);
     move_uploaded_file($_FILES['caracteristicas']['tmp_name'],$DIRIMG.$IMG);
-    $_UPD['prod_caracteristicas'] = $IMG;
+    $_UPD['prod_img'] = $IMG;
   } else if ( $_FILES['caracteristicas']['error'] != 4 ) {
     $DB->Rollback();
     $ERRFI['msg'] = $PRODUCTOS->getFileErrorMSG($_FILES['caracteristicas']['error']);
@@ -46,7 +46,7 @@
     exit;
   }
 
-  if ( $_FILES['diagrama']['error'] == 0 ) {
+  /*if ( $_FILES['diagrama']['error'] == 0 ) {
     $IMG = "pillar-diagrama-".$URL.$PRODUCTOS->getExtension($_FILES['diagrama']['name']);
     move_uploaded_file($_FILES['diagrama']['tmp_name'],$DIRIMG.$IMG);
     $_UPD['prod_diagrama'] = $IMG;
@@ -55,7 +55,7 @@
     $ERRFI['msg'] = $PRODUCTOS->getFileErrorMSG($_FILES['diagrama']['error']);
     echo json_encode( $ERRFI );
     exit;
-  }
+  }*/
 
   if ( !$PRODUCTOS->update( $_UPD, $ID ) ) {
     $DB->Rollback();
@@ -68,7 +68,7 @@
     if ( $e == 0 ) {
       $URLFILE = $SLIDER->makeURLFILE($_FILES['slider']['name'][$i]);
       $TITLE = $SLIDER->makeNombre($_FILES['slider']['name'][$i]);
-      $IMG = "pillar-".$URL."-".$URLFILE;
+      $IMG = "neuromex-".$URL."-".$URLFILE;
       move_uploaded_file($_FILES['slider']['tmp_name'][$i],$DIRIMG.$IMG);
       $_SLI['ps_imagen'] = $IMG;
       $_SLI['ps_title'] = $TITLE;
@@ -89,7 +89,7 @@
       if ( $e == 0 ) {
         $URLFILE = $DOCS->makeURL($_POST['filename'][$i]);
         $URLFILE .= $DOCS->getExtension($_FILES['files']['name'][$i]);
-        $DOC = "pillar-".$URL."-".$URLFILE;
+        $DOC = "neuromex-".$URL."-".$URLFILE;
 
         $SIZE =  $DOCS->formatBytes( $_FILES['files']['size'][$i] );
         move_uploaded_file($_FILES['files']['tmp_name'][$i],$DIRDOC.$DOC);

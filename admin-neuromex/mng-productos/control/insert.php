@@ -25,26 +25,39 @@
 
   $URL = $PRODUCTOS->makeURL( $_POST['nombre'] );
 
-  $_INS['prod_nombre'] = $PRODUCTOS->SanitizarTexto( $_POST['nombre'] );
-  $_INS['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
-  $_INS['prod_descripcion'] = $_POST['contenido'];
-  $_INS['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
-  $_INS['prod_marca'] = $_POST['marca'];
-  $_INS['prod_categoria'] = array_pop($_POST['categoria']);
+  $_INS['prod_name'] = $PRODUCTOS->SanitizarTexto( $_POST['nombre'] );
+  $_INS['prod_desc'] = $_POST['contenido'];
+  $_INS['prod_price'] = $_POST['precio'];
+  $_INS['prod_offer_price'] = $_POST['oferta'];
+  $_INS['prod_cat'] = array_pop($_POST['categoria']);
+  $_INS['prod_trademark'] = $_POST['marca'];
+  $_INS['prod_color'] = $_POST['color'];
+  $_INS['prod_size'] = $_POST['tamano'];
+  $_INS['prod_stock'] = $_POST['stock'];
+  //$_INS['prod_status'] = $_POST['disponible'];//checkbox
+  //$_INS['prod_rent'] = $_POST['renta'];//checkbox
+  $_INS['prod_mem_price'] = $_POST['miembros'];
   $_INS['prod_url'] = $URL;
-
-  //Guardar imagenes de caracteristicas y diagrama de uso
+  //$_INS['prod_resumen'] = $PRODUCTOS->SanitizarTexto( $_POST['resumen'] );
+  //$_INS['prod_video'] = str_replace("watch?v=","embed/",$_POST['video']);
+  if($_POST['disponible'] != null){
+    $_INS['prod_status'] = 1;
+  }
+  if($_POST['renta'] != null){
+    $_INS['prod_rent'] = 1;
+  }
+  //Guardar imagen principal del producto
   if ( $_FILES['caracteristicas']['error'] == 0 ) {
-    $IMG = "pillar-caracteristicas-".$URL.$PRODUCTOS->getExtension($_FILES['caracteristicas']['name']);
+    $IMG = "neuromex-".$URL.$PRODUCTOS->getExtension($_FILES['caracteristicas']['name']);
     move_uploaded_file($_FILES['caracteristicas']['tmp_name'],$DIRIMG.$IMG);
-    $_INS['prod_caracteristicas'] = $IMG;
+    $_INS['prod_img'] = $IMG;
   } else if ( $_FILES['caracteristicas']['error'] != 4 ) {
     $DB->Rollback();
     $ERRFI['msg'] = $PRODUCTOS->getFileErrorMSG($_FILES['caracteristicas']['error']);
     echo json_encode( $ERRFI );
     exit;
   }
-
+/*
   if ( $_FILES['diagrama']['error'] == 0 ) {
     $IMG = "pillar-diagrama-".$URL.$PRODUCTOS->getExtension($_FILES['diagrama']['name']);
     move_uploaded_file($_FILES['diagrama']['tmp_name'],$DIRIMG.$IMG);
@@ -54,7 +67,7 @@
     $ERRFI['msg'] = $PRODUCTOS->getFileErrorMSG($_FILES['diagrama']['error']);
     echo json_encode( $ERRFI );
     exit;
-  }
+  }*/
 
   if ( $PRODUCTOS->insert( $_INS ) ) {
     $ID = $DB->GetLastInsertID();
@@ -69,7 +82,7 @@
     if ( $e == 0 ) {
       $URLFILE = $SLIDER->makeURLFILE($_FILES['slider']['name'][$i]);
       $TITLE = $SLIDER->makeNombre($_FILES['slider']['name'][$i]);
-      $IMG = "pillar-".$URL."-".$URLFILE;
+      $IMG = "neuromex-".$URL."-".$URLFILE;
       move_uploaded_file($_FILES['slider']['tmp_name'][$i],$DIRIMG.$IMG);
       $_SLI['ps_imagen'] = $IMG;
       $_SLI['ps_title'] = $TITLE;
@@ -90,7 +103,7 @@
       if ( $e == 0 ) {
         $URLFILE = $DOCS->makeURL($_POST['filename'][$i]);
         $URLFILE .= $DOCS->getExtension($_FILES['files']['name'][$i]);
-        $DOC = "pillar-".$URL."-".$URLFILE;
+        $DOC = "neuromex-".$URL."-".$URLFILE;
 
         $SIZE =  $DOCS->formatBytes( $_FILES['files']['size'][$i] );
         move_uploaded_file($_FILES['files']['tmp_name'][$i],$DIRDOC.$DOC);
