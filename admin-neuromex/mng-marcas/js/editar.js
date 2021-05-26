@@ -5,8 +5,8 @@ $(function() {
         type: "GET",
         success: function(response) {
             $("input[name='id']").val(response.trademarck_id);
-            $("input[name='name']").val(fromHTML(response.name));
-            $("input[name='orden']").val(response.orden);
+            $("input[name='name']").val(fromHTML(response.trademarck_name));
+            $("input[name='orden']").val(response.trademarck_orden);
             $("input[type='file']").fileinput({
                 language: 'es',
                 showUpload: false,
@@ -16,7 +16,7 @@ $(function() {
                 allowedFileExtensions: ['jpg', 'png', 'gif'],
                 initialPreviewAsData: true,
                 initialPreviewFileType: 'image',
-                initialPreview: "../../img/marcas/" + response.logo,
+                initialPreview: "../../img/marcas/" + response.trademarck_logo,
             });
         },
         error: function() {
