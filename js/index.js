@@ -110,21 +110,17 @@ $(function() {
 let x = 0
 let color = document.getElementById('tema')
 let cont = document.getElementById('contenido')
-let titulos = document.getElementById('titulo')
 color.addEventListener('click', function() {
     if (x == 0) {
         color.classList.replace('fa-sun', 'fa-moon')
         cont.classList.add('temaPagina')
-        titulos.classList.remove('titulo')
-        titulos.classList.add('tituloDos')
         x = 1
     } else {
         color.classList.replace('fa-moon', 'fa-sun')
         cont.classList.remove('temaPagina')
-        titulos.classList.remove('tituloDos')
-        titulos.classList.add('titulo')
         x = 0
     }
+    //color.classList.replace('fa-sun', 'fa-moon')
 })
 
 /*Cambiar el color de la pagina*/
