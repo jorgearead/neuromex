@@ -44,7 +44,7 @@ var tabla = $('#resultados').DataTable({
 $(document).on("click", ".del", function() {
     var id = $(this).data('id');
     Swal.fire({
-        title: '¿Eliminar Marca?',
+        title: '¿Eliminar Membresia?',
         text: "Dejará de existir en el sistema, sus imágenes también se eliminarán",
         type: 'warning',
         showCancelButton: true,
