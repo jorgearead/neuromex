@@ -34,6 +34,8 @@
   $_INS['prod_color'] = $_POST['color'];
   $_INS['prod_size'] = $_POST['tamano'];
   $_INS['prod_stock'] = $_POST['stock'];
+  $_INS['prod_ranking'] = 0;
+  $_INS['prod_video'] = "video";
   $_INS['prod_status'] = $_POST['disponible'];//checkbox
   $_INS['prod_rent'] = $_POST['renta'];//checkbox
   $_INS['prod_mem_price'] = $_POST['miembros'];

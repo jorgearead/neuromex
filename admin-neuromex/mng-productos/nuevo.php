@@ -59,14 +59,14 @@
                       <input type="checkbox" class="form-control w-25" name="disponible" required-->
                       <div class="form-check form-switch">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Disponible al publico</label>
-                        <select name="disponible" >
+                        <select name="disponible" class="custom-select" id="inputGroupSelect02">
                             <option value="1">Disponible</option>
                             <option value="0">No disponible</option>
                         </select>
                       </div>
                       <div class="form-check form-switch">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Disponible para renta</label>
-                        <select name="renta" >
+                        <select name="renta" class="custom-select" id="inputGroupSelect02">
                             <option value="1">Disponible</option>
                             <option value="0">No disponible</option>
                         </select>
