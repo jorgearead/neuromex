@@ -45,24 +45,24 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="./control/insert.php" method="POST" autocomplete="off" >
+        <form action="./control/insert.php" method="POST" autocomplete="off">
           <div class="modal-body">
             <div class="form-group">
               <label class="control-label mb-1">Nombre</label>
-              <input name="name" type="text" class="form-control" placeholder="Usuario" onkeypress="return NumerosyLetras(event)" required>
+              <input name="name" type="text" class="form-control" placeholder="Nombre" data-regla="numletras" data-msg="Revise el nombre del usuario." required>
             </div>
             <div class="form-group">
               <label class="control-label mb-1">Correo Electrónico</label>
-              <input name="sesion" type="text" class="form-control" placeholder="Nombre" onkeypress="return ValCorreo(event)" required>
+              <input name="sesion" type="text" class="form-control" placeholder="Correo" data-regla="correo" data-msg="Revise la dirección de correo electrónico." required>
             </div>
             <div class="form-group">
               <label class="control-label mb-1">Contraseña</label>
-              <input name="contra" type="password" class="form-control" placeholder="***************" required>
+              <input name="contra" type="password" class="form-control" placeholder="***************" data-msg="La contraseña debe medir al menos 8 caracteres y contener al menos: un número, una mayúscula, una minúscula y un símbolo @$!%*?&#=+-" required>
             </div>
           </div>
           <div class="modal-footer">
-            <button id="btncncl1" type="reset" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
-            <button id="btnsbmt1" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Aceptar</button>
+            <button type="reset" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Aceptar</button>
           </div>
         </form>
       </div>
@@ -84,20 +84,20 @@
             <input type="hidden" name="id" id="edus" value="">
             <div class="form-group">
               <label class="control-label mb-1">Nombre</label>
-              <input name="name" id="edname"type="text" class="form-control" placeholder="Usuario" onkeypress="return NumerosyLetras(event)" required>
+              <input name="name" type="text" class="form-control" placeholder="Usuario" data-regla="numletras" data-msg="Revise el nombre del usuario." required>
             </div>
             <div class="form-group">
               <label class="control-label mb-1">Correo Electrónico</label>
-              <input name="sesion" id="edusname" type="text" class="form-control" placeholder="Nombre" onkeypress="return ValCorreo(event)" required>
+              <input name="sesion" type="text" class="form-control" placeholder="Nombre" data-regla="correo" data-msg="Revise la dirección de correo electrónico." required>
             </div>
             <div class="form-group">
               <label class="control-label mb-1">Contraseña</label>
-              <input name="contra" id="edcontra" type="password" class="form-control" placeholder="***************" required>
+              <input name="contra" type="password" class="form-control" placeholder="***************" data-msg="La contraseña debe medir al menos 8 caracteres y contener al menos: un número, una mayúscula, una minúscula y un símbolo @$!%*?&#=+-">
             </div>
           </div>
           <div class="modal-footer">
-            <button id="btncncl2" type="reset" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
-            <button id="btnsbmt2" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Aceptar</button>
+            <button type="reset" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Aceptar</button>
           </div>
         </form>
       </div>
