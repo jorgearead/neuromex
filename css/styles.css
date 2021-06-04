@@ -1,6 +1,7 @@
 /*---------------Header slider---------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 * {
     text-decoration: none;
     list-style: none;
@@ -12,69 +13,11 @@
 
 html,
 body {
-    font-family: 'Quantico', sans-serif;
-    background-color: #252525;
+    /*font-family: 'Quantico', sans-serif;*/
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #191919;
+    /*#252525;*/
 }
-
-
-/*Estilos de Footer*/
-
-.footer {
-    /*position: fixed;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(29, 29, 29);
-    color: white;
-    text-align: center;
-}
-
-.footer .footer-conte {
-    background-color: thistle;
-    width: 80%;
-    margin-bottom: 15px;
-    display: contents;
-}
-
-.aviso,
-.redes,
-.dere-reser {
-    padding: 3px;
-    margin-left: 15px;
-    margin-right: 15px;
-    color: white;
-}
-
-.aviso a {
-    color: #e8d700;
-}
-
-.redes ul {
-    display: flex;
-    margin: 5px;
-    list-style: none;
-    justify-content: center;
-}
-
-.redes ul li {
-    color: white;
-    padding: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: #354750;
-    border-radius: 5px;
-}
-
-.redes ul li a {
-    color: white;
-}
-
-
-/*Estilos de Footer*/
 
 .temaPagina {
     transition: 0.8s;
@@ -194,7 +137,7 @@ header section .carousel-container .dots .dot:hover {
 
 .has-dflex-center svg {
     width: 15px;
-    color: #e8d700;
+    color: #ffffff;
 }
 
 @keyframes fade {
@@ -261,6 +204,8 @@ a.active,
 a:hover {
     border: 1px solid #e8d700;
     transition: 0.5s;
+    color: gold;
+    border-radius: 25px;
 }
 
 header nav #icon {
@@ -413,8 +358,8 @@ header nav a:hover {
     }
     a.active,
     a:hover {
-        border: none;
-        color: #e8d700;
+        border: 1px solid #e8d70038;
+        transition: 0.5s;
     }
     header nav ul.show {
         left: 0;
@@ -549,3 +494,74 @@ h1 {
 
 
 /*------------------Cartas------------------*/
+
+.carousel-container a:hover {
+    border: none;
+    cursor: pointer;
+}
+
+
+/*Estilos de Footer*/
+
+.footer {
+    /*position: fixed;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    text-align: center;
+}
+
+.footer .footer-conte {
+    background-color: thistle;
+    width: 80%;
+    margin-bottom: 15px;
+    display: contents;
+}
+
+.aviso,
+.redes,
+.dere-reser {
+    padding: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+}
+
+.aviso a {
+    color: #e8d700;
+}
+
+.redes ul {
+    display: flex;
+    margin: 5px;
+    list-style: none;
+    justify-content: center;
+}
+
+.redes ul li {
+    color: white;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #354750;
+    border-radius: 5px;
+}
+
+.redes ul li a {
+    color: white;
+}
+
+.aviso a,
+.redes ul li a:hover {
+    cursor: pointer;
+    border: none;
+}
+
+
+/*Estilos de Footer*/
