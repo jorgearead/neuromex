@@ -49,7 +49,7 @@
 
                 <div class="form-group">
                   <label>Imagen</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 1900 x 600 px</span>
+                  <span class="badge badge-warning">Medidas de 1903 × 922 px</span>
                   <input type="file" name="imagen" required>
                 </div>
 
@@ -80,7 +80,7 @@
 
                 <div class="form-group">
                   <label>Imagen</label>&nbsp;&nbsp;
-                  <span class="badge badge-warning">Medidas de 1900 x 600 px</span>
+                  <span class="badge badge-warning">Medidas de 1903 × 922 px</span>
                   <input type="file" name="imagen">
                 </div>
 

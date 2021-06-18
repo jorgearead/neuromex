@@ -5,7 +5,7 @@ class DBManager {
 	public function __construct() {
 		$this->conn = null;
 		$host = "mysql:host=localhost";
-		$DB   = "dbname=neuro";
+		$DB   = "dbname=neuromex";
 		$user = "root";
 		$pass = "";
 		try {
