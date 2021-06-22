@@ -74,7 +74,10 @@
             </div>
             <div class="form-group">
               <label class="control-label mb-1">Tipo de Membresia</label>
-              <input name="mem" id="mem" type="number" class="form-control" min="0" max="2" placeholder="Basica -> 1 Profesional -> 2" data-regla="entero" data-msg="Revise la membresia que sea 0, 1 o 2." required>
+              <select name="mem" id="mem">
+                <option value="1">Basica</option>
+                <option value="2">Profesional</option>
+              </select>
             </div>
           </div>
           <div class="modal-footer">
