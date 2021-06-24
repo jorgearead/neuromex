@@ -10,8 +10,8 @@ $URL = (isset($_GET['url'])) ? $_GET['url'] : "home";
 
 $INTERNA = (file_exists("$URL.php")) ? "./$URL.php" : "./404.php";
 
-/*require_once 'function/services.class.php';
-  $SERVS = new Servicios;*/
+require_once 'function/services.class.php';
+  $SERVS = new Servicios;
 
 switch ($URL) {
     case 'home':

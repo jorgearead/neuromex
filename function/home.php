@@ -1,0 +1,3 @@
+<?php
+$SLIDER = $SERVS->getSlider();
+?>
