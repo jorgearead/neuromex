@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <div id="logo" class="pull-left">
-            <a href="#intro"><img src="img/logo-neuromex.png" alt="" title="" /></a>
+            <a href="home"><img src="img/logo-neuromex.png" alt="" title="" /></a>
         </div>
 
         <nav id="nav-menu-container">

@@ -38,7 +38,7 @@ class Servicios extends DBManager {
     $RET = $this->Consultar($SQL);
     return $RET;
   }
-
+/*
   public function getProductosMenu($CAT) {
     $SQL = "SELECT prod_nombre, prod_url FROM tbl_productos WHERE prod_categoria = {$CAT} ORDER BY prod_nombre ASC";
     $RET = $this->Consultar($SQL);
@@ -66,15 +66,16 @@ class Servicios extends DBManager {
     }
     return $MENU;
   }
-
+*/
+/*
   public function getServicios() {
     $SQL = "SELECT serv_nombre, serv_url FROM tbl_servicios ORDER BY serv_orden ASC";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
-
+*/
   public function getMarcas(){
-    $SQL = "SELECT marca_name, marca_logo, marca_url FROM tbl_marcas ORDER BY marca_orden ASC";
+    $SQL = "SELECT * FROM tbl_trademarck ORDER BY trademarck_orden ASC";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
@@ -84,7 +85,7 @@ class Servicios extends DBManager {
     $RET = $this->Consultar($SQL);
     return $RET;
   }
-
+/*
   public function getAppsMenu($DEPENDE) {
     $SQL = "SELECT app_nombre, app_url FROM tbl_aplicaciones WHERE app_categoria = {$DEPENDE} ORDER BY app_orden ASC";
     $RET = $this->Consultar($SQL);
@@ -102,9 +103,9 @@ class Servicios extends DBManager {
     $RET = $this->Consultar($SQL);
     return $RET;
   }
-
+*/
   public function getSlider() {
-    $SQL = "SELECT slider_titulo, slider_texto, slider_imagen FROM tbl_slider";
+    $SQL = "SELECT * FROM tbl_slider";
     $RET = $this->Consultar($SQL);
     return $RET;
   }

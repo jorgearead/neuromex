@@ -24,5 +24,3 @@
         </div>
     </div>
 </div>
-<script src="<?=$URLORIGEN?>admin-neuromex/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="<?=$URLORIGEN?>admin-neuromex/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>

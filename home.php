@@ -6,70 +6,20 @@
                 <ol class="carousel-indicators"></ol>
 
                 <div class="carousel-inner" role="listbox">
-
-                    <div class="carousel-item active">
-                        <div class="carousel-background"><img src="img/intro-carousel/1.png" alt=""></div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>We are professional</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
-                                </p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                    <?php foreach ($SLIDER as $S): ?>
+                        <div class="carousel-item <?php if($S['slider_id']==1){ ?>active<?php } ?>">
+                            <div class="carousel-background">
+                                <img loading="lazy" src="<?=$URLORIGEN?>img/slider/<?=$S['slider_imagen']?>" alt="neuromex">
+                            </div>
+                            <div class="carousel-container">
+                                <div class="carousel-content">
+                                    <h2><?=$S['slider_titulo']?></h2>
+                                    <p><?=$S['slider_texto']?></p>
+                                    <a href="#" class="btn-get-started scrollto">Ver m&aacute;s</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="img/intro-carousel/2.png" alt=""></div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>At vero eos et accusamus</h2>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
-                                    debitis aut.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="img/intro-carousel/3.png" alt=""></div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Temporibus autem quibusdam</h2>
-                                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem
-                                    accusantium.
-                                </p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="img/intro-carousel/4.png" alt=""></div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Nam libero tempore</h2>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-                                    quis nostrum.</p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-background"><img src="img/intro-carousel/5.png" alt=""></div>
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2>Magnam aliquam quaerat</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
-                                </p>
-                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php endforeach; ?>
                 </div>
 
                 <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
@@ -91,111 +41,47 @@
         <!-- Categorias de productos -->
         <section id="portfolio" class="section-bg">
             <div class="container">
-
                 <header class="section-header">
-                    <h3 class="section-title">Categorias</h3>
+                    <h3 class="section-title">Marcas</h3>
                 </header>
 
                 <div class="row">
                     <div class="col-lg-12">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">Todas</li>
-                            <li data-filter=".electronica">Electronica</li>
-                            <li data-filter=".microcontrolador">Microcontrolador</li>
-                            <li data-filter=".microprocesador">Microprocesador</li>
+                            <?php foreach ($TRADEMARCK as $M): ?>
+                                <li data-filter=".<?=$M['trademarck_name']?>"><?=$M['trademarck_name']?></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
 
                 <div class="row portfolio-container">
+                    <?php foreach ($TRADEMARCK as $M): ?>
+                        <div class="col-lg-4 col-md-6 portfolio-item <?=$M['trademarck_name']?> wow fadeInUp">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img loading="lazy" src="<?=$URLORIGEN?>img/marcas/<?=$M['trademarck_logo']?>" class="img-fluid" alt="neuromex_<?=$M['trademarck_logo']?>">
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item electronica wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/electronica.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Electronica</a></h4>
+                                <div class="portfolio-info">
+                                    <h4><a href="<?=$M['trademarck_url']?>"><?=$M['trademarck_name']?></a></h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item microprocesador wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/raspberry.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Microprocesador</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item electronica wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/electronica.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Electronica</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item microcontrolador wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/arduino.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Microcontrolador</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item microprocesador wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/iot.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Microprocesador</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item electronica wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/categorias/electronica.jpg" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="#">Electronica</a></h4>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
 
                 </div>
 
             </div>
         </section>
+
         <section id="call-to-action" class="wow fadeIn">
             <div class="container text-center">
                 <h3>Visita nuestra tienda</h3>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="cta-btn" href="#">Ir a tienda</a>
+                <p>Encontaras todo el material necesario para poder crear tus proyectos.</p>
+                <a class="cta-btn" href="tienda.php">Ir a tienda</a>
             </div>
         </section>
         <!-- Categorias de productos -->
