@@ -31,7 +31,7 @@
     <script src="<?=$URLORIGEN?>lib/touchSwipe/jquery.touchSwipe.min.js"></script>
     <script src="<?=$URLORIGEN?>js/main.js"></script>
 	<!-- Javascript files-->
-	<script src="<?=$URLORIGEN?>vendor/jquery/jquery.min.js"></script>
+	<script src="<?=$URLORIGEN?>lib/jquery/jquery.min.js"></script>
 	<?php if (file_exists("./js/{$URL}.js")) : ?>
 	<?php endif; ?>
 </body>

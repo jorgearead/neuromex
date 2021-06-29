@@ -85,6 +85,12 @@ class Servicios extends DBManager {
     $RET = $this->Consultar($SQL);
     return $RET;
   }
+
+  public function getMembresias(){
+    $SQL = "SELECT * FROM tbl_membership ORDER BY mem_id ASC";
+    $RET = $this->Consultar($SQL);
+    return $RET;
+  }
 /*
   public function getAppsMenu($DEPENDE) {
     $SQL = "SELECT app_nombre, app_url FROM tbl_aplicaciones WHERE app_categoria = {$DEPENDE} ORDER BY app_orden ASC";

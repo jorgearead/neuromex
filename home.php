@@ -153,38 +153,24 @@
 
                 <header class="section-header wow fadeInUp">
                     <h3>Membresias</h3>
-                    <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
                 </header>
                 <div class="row about-cols d-flex justify-content-center">
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/neuromex-logo-2.jpeg" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-card"></i></div>
-                                <!--ion-icon name="id-card-outline"></ion-icon-->
+                    <?php foreach ($MEMBERSHIP as $MEM): ?>
+                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="about-col">
+                                <div class="img">
+                                    <img loading="lazy" src="<?=$URLORIGEN?>img/membresia/<?=$MEM['mem_logo']?>" alt="neuromex" class="img-fluid">
+                                    <div class="icon"><i class="ion-card"></i></div>
+                                </div>
+                                <h2 class="title"><a href="#"><?=$MEM['mem_name']?></a></h2>
+                                <p><?=$MEM['mem_desc']?></p>
                             </div>
-                            <h2 class="title"><a href="#">Plus</a></h2>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </p>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
 
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/neuromex-logo-3.jpeg" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-card"></i></div>
-                            </div>
-                            <h2 class="title"><a href="#">B&aacute;sica</a></h2>
-                            <p>
-                                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                            </p>
-                        </div>
-                    </div>
                 </div>
                 <div class="container text-center">
-                    <a class="cta-btn boton" href="#">Ver m&aacute;s informaci&oacute;n</a>
+                    <a class="cta-btn boton" href="membresias">Ver m&aacute;s informaci&oacute;n</a>
                 </div>
 
             </div>
