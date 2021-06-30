@@ -43,13 +43,29 @@
     </div>
     <!--Producto-->
 
-    <!--Imagenes de productos-->
+</div>
+<!--Imagenes de productos-->
     <main id="main">
+        <section id="portfolio" class="section-bg">
+        <?php foreach ($SLIDER as $S): ?>
+            <div class="container">
+                <div class="row portfolio-container">
+                    <div class="col-lg-3 col-md-3 portfolio-item electronica wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" class="img-fluid" alt="">
+                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </section>
     </main>
     <!--Imagenes de productos-->
-
-    <!--Archivos-->
-    <div id="accordion" role="tablist" class="mb-5 col-12">
+<!--Archivos-->
+<div id="accordion" role="tablist" class="mb-5 col-12">
         <div class="card bg-dark">
             <div id="headingOne" role="tab" class="card-header">
                 <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Características</a></h5>
@@ -68,4 +84,3 @@
         </div>
     </div>
     <!--Archivos-->
-</div>
