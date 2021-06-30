@@ -1,0 +1,3 @@
+<?php
+    $PRODUC = $SERVS->getProductos();
+?>

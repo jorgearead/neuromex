@@ -136,14 +136,22 @@ class Servicios extends DBManager {
     return $CATES;
   }
 
+  /*------------------ Productos ------------------*/
+
   public function getCategorias($ID) {
     $SQL = "SELECT * FROM tbl_producto_categorias WHERE pc_depende = {$ID}";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
 
-  public function getProductos($ID) {
-    $SQL = "SELECT * FROM tbl_productos INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_categoria = {$ID} GROUP BY prod_id";
+  public function getProductos(){
+    $SQL = "SELECT * FROM tbl_product";
+    $RET = $this->Consultar($SQL);
+    return $RET;
+  }
+
+  public function getProducto($ID) {
+    $SQL = "SELECT * FROM tbl_product INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_categoria = {$ID} GROUP BY prod_id";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
@@ -160,17 +168,25 @@ class Servicios extends DBManager {
     return $RET;
   }
 
+  public function getProdsRelacionados($ID) {
+    $SQL = "SELECT prod_url, prod_nombre, prod_resumen, ps_imagen FROM tbl_productos INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_categoria = {$ID} GROUP BY prod_id LIMIT 3";
+    $RET = $this->Consultar($SQL);
+    return $RET;
+  }
+
   public function getDocumentos($ID) {
     $SQL = "SELECT * FROM tbl_documentos WHERE doc_producto = {$ID}";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
 
-  public function getProdsRelacionados($ID) {
-    $SQL = "SELECT prod_url, prod_nombre, prod_resumen, ps_imagen FROM tbl_productos INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_categoria = {$ID} GROUP BY prod_id LIMIT 3";
+  public function getProdsByMarca($ID) {
+    $SQL = "SELECT * FROM tbl_productos INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_marca = {$ID} GROUP BY prod_id";
     $RET = $this->Consultar($SQL);
     return $RET;
   }
+
+  /*------------------ Productos ------------------*/
 
   public function getContacto($URL) {
     $SQL = "SELECT * FROM tbl_contacto WHERE con_url = '{$URL}'";
@@ -200,12 +216,6 @@ class Servicios extends DBManager {
     $SQL = "SELECT * FROM tbl_marcas WHERE marca_url = '{$URL}'";
     $RET = $this->Consultar($SQL);
     return $RET[0];
-  }
-
-  public function getProdsByMarca($ID) {
-    $SQL = "SELECT * FROM tbl_productos INNER JOIN tbl_producto_slider ON ps_producto = prod_id WHERE prod_marca = {$ID} GROUP BY prod_id";
-    $RET = $this->Consultar($SQL);
-    return $RET;
   }
 
   public function getCatAppByURL($URL) {

@@ -1693,5 +1693,9 @@ hr {
     }
 }
 
+.input-cant{
+    background-color: var(--verde);
+    color: var(--letras-blacas);
+}
 
 /*-------------------- Prodcutos --------------------*/
