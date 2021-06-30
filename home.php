@@ -178,8 +178,8 @@
         <section id="call-to-action" class="wow fadeIn">
             <div class="container text-center">
                 <h3>Ventajas de una membreisa </h3>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="cta-btn" href="#">Conocer m&aacute;s sobre la membresia</a>
+                <p>Podras tener acceso a un panel administrador de compras y ademas podras acceder a contenido exclusivo.</p>
+                <a class="cta-btn" href="membresias">Conocer m&aacute;s sobre la membresia</a>
             </div>
         </section>
         <!-- Membresias -->
