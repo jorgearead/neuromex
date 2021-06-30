@@ -7,7 +7,7 @@
             <div class="col-12 col-sm-12 col-md-4 col-xl-4 p-5">
                 <div class="producto">
                     <div class="row">
-                        <img loading="lazy" src="<?=$URLORIGEN?>img/productos/<?=$P['prod_img']?>" class="card-img-top" alt="">
+                        <img loading="lazy" src="<?=$URLORIGEN?>img/productos/<?=$P['prod_img']?>" class="card-img-top" alt="<?=$P['prod_name']?>">
                     </div>
                     <div class="row infor text-center justify-content-around">
                         <div class="col-12">
@@ -23,7 +23,7 @@
                             <button class="btn boton-producto ion-ios-cart"></button>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-xl-7">
-                            <a href="<?=$P['prod_url']?>">
+                            <a href="<?=$URLORIGEN?>producto/<?=$P['prod_url']?>">
                                 <button class="btn boton-producto">Ver m&aacute;s</button>
                             </a>
                         </div>

@@ -1,22 +1,33 @@
 <div class="row contenido">
+    <!--Producto-->
+    <div class="col-12 infor text-center">
+        <h1><?=$PROD['prod_name']?></h1>
+    </div>
     <div class="col-12 col-sm-12 col-md-6">
         <div class="row p-5">
             <div class="col-12">
-                <img src="./img/productos/RASP.png" class="card-img-top" alt="">
+                <img src="<?=$URLORIGEN?>img/productos/<?=$PROD['prod_img']?>" class="card-img-top" alt="<?=$PROD['prod_name']?>">
             </div>
         </div>
         <div class="row infor text-center">
+            <!--div class="col-12">
+                <h2></h2>
+            </div-->
             <div class="col-12">
-                <h2>Raspberry pi 3</h2>
-            </div>
-            <div class="col-12">
-                <h3>$1000.00</h3>
+                <h3>$
+                    <?php 
+                        if($PROD['prod_offer_price']>0) {
+                            echo 'De <s>'.$PROD['prod_price'].'</s> a '.$PROD['prod_offer_price'];
+                        }else{
+                            echo $PROD['prod_price'];
+                    }?>
+                </h3>
             </div>
         </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 text-center p-5">
         <div class="col-12 infor title">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum veritatis, magnam, provident repellat vitae beatae dolorem iste deserunt numquam, expedita commodi nulla hic enim ratione impedit illum assumenda. Maxime, dolor.</p>
+            <p><?=$PROD['prod_desc']?></p>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-xl-6 input-group p-3">
@@ -30,6 +41,14 @@
             </div>
         </div>
     </div>
+    <!--Producto-->
+
+    <!--Imagenes de productos-->
+    <main id="main">
+    </main>
+    <!--Imagenes de productos-->
+
+    <!--Archivos-->
     <div id="accordion" role="tablist" class="mb-5 col-12">
         <div class="card bg-dark">
             <div id="headingOne" role="tab" class="card-header">
@@ -48,4 +67,5 @@
             </div>
         </div>
     </div>
+    <!--Archivos-->
 </div>
