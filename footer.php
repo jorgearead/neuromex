@@ -5,7 +5,7 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-12 text-center">
-                    <h3><img src="./img/logo-neuromex.png" alt=""></h3>
+                    <h3><img src="<?=$URLORIGEN?>img/logo-neuromex.png" alt=""></h3>
                     <p>Visita nuestro aviso de privacidad.</p>
                 </div>
 

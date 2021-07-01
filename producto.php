@@ -20,7 +20,7 @@
                             echo 'De <s>'.$PROD['prod_price'].'</s> a '.$PROD['prod_offer_price'];
                         }else{
                             echo $PROD['prod_price'];
-                    }?>
+                        }?>
                 </h3>
             </div>
         </div>
@@ -45,42 +45,49 @@
 
 </div>
 <!--Imagenes de productos-->
-    <main id="main">
-        <section id="portfolio" class="section-bg">
-        <?php foreach ($SLIDER as $S): ?>
-            <div class="container">
-                <div class="row portfolio-container">
-                    <div class="col-lg-3 col-md-3 portfolio-item electronica wow fadeInUp">
-                        <div class="portfolio-wrap">
-                            <figure>
-                                <img src="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" class="img-fluid" alt="">
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+<main id="main">
+    <section id="clients" class="wow fadeInUp">
+        <div class="container">
+            <header class="section-header">
+            <h3>Imagenes del producto</h3>
+            </header>
+            <div class="owl-carousel clients-carousel">
+                <?php foreach ($SLIDER as $S): ?>
+                    <a href="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" data-lightbox="portfolio" class="link-preview" title="Vista previa">
+                        <img src="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" alt="">
+                    </a>
+                <?php endforeach; ?>
             </div>
-        <?php endforeach; ?>
-        </section>
-    </main>
-    <!--Imagenes de productos-->
+        </div>
+    </section>
+</main>
+<!--Imagenes de productos-->
+
 <!--Archivos-->
-<div id="accordion" role="tablist" class="mb-5 col-12">
-        <div class="card bg-dark">
-            <div id="headingOne" role="tab" class="card-header">
-                <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Características</a></h5>
-            </div>
-            <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" class="collapse">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="" target="blank">
-                            <img src="" alt="" class="img-fluid">
-                            </a>
+<div class="row d-flex justify-content-center p-0 m-0">
+    <div class="col-10">
+        <div class="accordion" id="accordionExample">
+            <div class="card bg-dark">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <p class="texto-gen m-0 p-0">Documentos del producto</p>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <center><?php if(empty($DOCS)){echo '<p class="texto-gen m-0 p-0">No hay documentos</p>';} ?></center>
+                    <?php foreach ($DOCS as $D): ?>
+                        <div class="card-body col-12">
+                            <p class="texto-gen m-0 p-0"><?=$D['doc_nombre']?></p>
+                            <span class="texto-gen"><?=$D['doc_file']?> ( <?=$D['doc_size']?> )</span>
+                            <a href="<?=$URLORIGEN?>docs/<?=$D['doc_file']?>" download><i class="fa fa-download"></i></a>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
     </div>
-    <!--Archivos-->
+</div>
+
+<!--Archivos-->

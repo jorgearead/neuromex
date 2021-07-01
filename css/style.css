@@ -1654,7 +1654,7 @@ hr {
 
 .infor {
     color: var(--letras-blacas);
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .boton-producto {
@@ -1695,6 +1695,10 @@ hr {
 
 .input-cant{
     background-color: var(--verde);
+    color: var(--letras-blacas);
+}
+
+.texto-gen{
     color: var(--letras-blacas);
 }
 
