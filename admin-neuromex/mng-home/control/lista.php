@@ -39,13 +39,14 @@ $DATA = array();
 foreach ( $RESULTADOS as $R ) {
 
   $OPC = "";
-  $OPC.= '<i class="fa fa-pencil" data-id="'.$R['slider_id'].'" data-titulo="'.$R['slider_titulo'].'" data-texto="'.$R['slider_texto'].'" data-imagen="'.$R['slider_imagen'].'"></i>&nbsp;&nbsp;';
+  $OPC.= '<i class="fa fa-pencil" data-id="'.$R['slider_id'].'" data-titulo="'.$R['slider_titulo'].'" data-texto="'.$R['slider_texto'].'" data-hipervinculo="'.$R['slider_link'].'" data-imagen="'.$R['slider_imagen'].'"></i>&nbsp;&nbsp;';
   $OPC.= '<i class="fa fa-trash-o" data-id="'.$R['slider_id'].'"></i>';
 
   $DATA[] = array (
-    "texto" => "<b>".$R['slider_titulo']."</b><p>".$R['slider_texto']."</p>",
-    "imagen"  => '<img src="../../img/slider/'.$R['slider_imagen'].'" width="100px">',
-    "opciones"  => $OPC
+    "texto"        => "<b>".$R['slider_titulo']."</b><p>".$R['slider_texto']."</p>",
+    "imagen"       => '<img src="../../img/slider/'.$R['slider_imagen'].'" width="100px">',
+    "hipervinculo" => "<p>".$R['slider_link']."</p>",
+    "opciones"     => $OPC
   );
 
 }

@@ -20,6 +20,14 @@
   if (isset( $_POST['titulo']) && $_POST['titulo'] != "") $_UPD['slider_titulo'] = $SLIDER->SanitizarTexto($_POST['titulo']);
   if (isset( $_POST['texto']) && $_POST['texto'] != "") $_UPD['slider_texto'] = $SLIDER->SanitizarTexto($_POST['texto']);
 
+  if (empty($_POST['hipervinculo'])){
+    $LINK = "#";
+  }else{
+    $LINK = $SLIDER->SanitizarTexto($_POST['hipervinculo']);
+  }
+
+  $_UPD['slider_link'] = $LINK;
+
   if ( $_FILES["imagen"]['error'] == 0 ) {
     $IMG = "neuromex-".$SLIDER->makeURLFILE($_FILES["imagen"]['name']);
     move_uploaded_file($_FILES["imagen"]['tmp_name'], $DIRIMG.$IMG);

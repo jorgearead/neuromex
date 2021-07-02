@@ -11,6 +11,7 @@ var tabla = $('#resultados').DataTable({
     columns: [
         { data: 'texto', name: "slider_titulo" },
         { data: 'imagen', name: "slider_imagen" },
+        { data: 'hipervinculo', name: "slider_link" },
         { data: 'opciones', searchable: false, orderable: false },
     ],
     language: lang
@@ -29,10 +30,12 @@ $(document).on("click", ".fa-pencil", function() {
     var imagen = $(this).data('imagen');
     var titulo = $(this).data('titulo');
     var texto = $(this).data('texto');
+    var hipervinculo = $(this).data('hipervinculo');
     var id = $(this).data('id');
     $("#editar input[name='id']").val(id);
     $("#editar input[name='titulo']").val(fromHTML(titulo));
     $("#editar textarea[name='texto']").html(fromHTML(texto));
+    $("#editar input[name='hipervinculo']").val(fromHTML(hipervinculo));
     $("#editar input[type='file']").fileinput('destroy');
     $("#editar input[name='imagen']").fileinput({
         language: 'es',

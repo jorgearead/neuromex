@@ -19,7 +19,8 @@
                   <tr>
                     <th>Texto</th>
                     <th>Imagen</th>
-                    <th></th>
+                    <th>Hipervinculo</th>
+                    <th>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +54,11 @@
                   <input type="file" name="imagen" required>
                 </div>
 
+                <div class="form-group">
+                  <label>Hipervinculo</label>
+                  <input type="text" class="form-control" name="hipervinculo" data-regla="texto" data-msg="">
+                </div>
+
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-save"></i>&nbsp;&nbsp;Guardar</button>
@@ -82,6 +88,11 @@
                   <label>Imagen</label>&nbsp;&nbsp;
                   <span class="badge badge-warning">Medidas de 1903 × 922 px</span>
                   <input type="file" name="imagen">
+                </div>
+
+                <div class="form-group">
+                  <label>Hipervinculo</label>
+                  <input type="text" class="form-control" name="hipervinculo" data-regla="texto" data-msg="Revise su hipervinculo">
                 </div>
 
               </div>
