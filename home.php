@@ -15,7 +15,7 @@
                                 <div class="carousel-content">
                                     <h2><?=$S['slider_titulo']?></h2>
                                     <p><?=$S['slider_texto']?></p>
-                                    <a href="#" class="btn-get-started scrollto">Ver m&aacute;s</a>
+                                    <a href="<?=$S['slider_link']?>" class="btn-get-started scrollto">Ver m&aacute;s</a>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
             <div class="container text-center">
                 <h3>Visita nuestra tienda</h3>
                 <p>Encontaras todo el material necesario para poder crear tus proyectos.</p>
-                <a class="cta-btn" href="tienda.php">Ir a tienda</a>
+                <a class="cta-btn" href="tienda">Ir a tienda</a>
             </div>
         </section>
         <!-- Categorias de productos -->
