@@ -10,8 +10,27 @@
             <ul class="nav-menu">
                 <li class="<?php if($URL=='home'){echo 'menu-active menu-item-active';}?>"><a href="<?=$URLORIGEN?>home">Home</a></li>
                 <li class="<?php if($URL=='tienda'){echo 'menu-active menu-item-active';}?>"><a href="<?=$URLORIGEN?>tienda">Tienda</a></li>
-                <li class="<?php if($URL=='carrito'){echo 'menu-active menu-item-active';}?>"><a href="<?=$URLORIGEN?>carrito">Carrito</a></li>
-                <li class="<?php if($URL=='finalizar-compra'){echo 'menu-active menu-item-active';}?>"><a href="<?=$URLORIGEN?>finalizar-compra">Finalizar compra</a></li>
+
+                <li class="<?php if($URL=='carrito'){echo 'menu-active menu-item-active';}?>">
+                    <a href="<?=$URLORIGEN?>carrito">Carrito</a>
+                    <!--ul id="carrito">
+                        <li><a href="#" class="vacio button">Carrito vacio</a></li>
+                        <table id="lista-carrito" class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <li><a href="#" id="vaciar-carrito" class="button">Vaciar carrito</a></li>
+                    </ul-->
+                </li>
+
+                <li class="<?php if($URL=='finalizar-compra'){echo 'menu-active menu-item-active';}?>" id="carrito"><a href="<?=$URLORIGEN?>finalizar-compra">Finalizar compra</a></li>
                 <li class="<?php if($URL=='laboratorio'){echo 'menu-active menu-item-active';}?>"><a href="<?=$URLORIGEN?>laboratorio">Laboratorio</a></li>
                 <li class="<?php if($URL=='login' || $URL=='membresias'){echo 'menu-active menu-item-active';}?>" class="menu-has-children"><a href="">Miembro</a>
                     <ul>
