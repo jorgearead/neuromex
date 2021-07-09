@@ -33,6 +33,7 @@
 	<!-- Javascript files-->
 	<script src="<?=$URLORIGEN?>lib/jquery/jquery.min.js"></script>
 	<?php if (file_exists("./js/{$URL}.js")) : ?>
+        <script src="<?=$URLORIGEN?>js/<?=$URL?>.js"></script>
 	<?php endif; ?>
 </body>
 
