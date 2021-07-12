@@ -5,7 +5,7 @@ require_once '../../php/conexion.class.php';
 require_once '../../php/tabla.class.php';
 $DB = new DBManager;
 
-require_once '../model/cliente.class.php';
+require_once '../model/miembros.class.php';
 $CLIENTE = new Cliente($DB);
 
 $_INS = array();
@@ -19,7 +19,7 @@ $_INS['verification'] = $CLIENTE->makeRandom();
 if ( $CLIENTE->insert( $_INS ) ) {
   $_REPLACE = array(
     "nombre" => $_INS['name']." ".$_INS['lastname'],
-    "enlace" => "localhost://neuro/verificar-cuenta/".$_INS['verification']
+    "enlace" => "http://neuromes.com.mx/verificar-cuenta/".$_INS['verification']
   );
   $HTML = file_get_contents("../templates/verificacion.html");
 

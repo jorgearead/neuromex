@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Correo de verificacion</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: black;
+      text-decoration: none;
+    }
+
+    body {
+      background-color: #ececec;
+      display: block;
+    }
+
+    .mensaje {
+      margin-top: 150px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cuerpo {
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, .25);
+      border-radius: 20px;
+    }
+
+    .header {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      margin-bottom: 5px;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .verifica {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      width: 75%;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .verifica strong {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .verifica strong a {
+      color: white;
+      padding: 10px;
+      background-color: #002444;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, .25);
+      border-radius: 25px;
+      transition: 0.5s;
+    }
+
+    a:hover {
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, .25);
+    }
+
+    @media (max-width: 800px) {
+      .cuerpo {
+        width: 75%;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .header img {
+        width: 75%;
+      }
+      .header h1 {
+        font-size: 22px;
+      }
+      .cuerpo {
+        width: 75%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class='mensaje'>
+    <div class='cuerpo'>
+      <header class='header'>
+        <img src='http://neuromex.com.mx/img/logo.png' alt="Neuromex">
+        <h1>¡Verifica tu cuenta!</h1>
+      </header>
+      <main class='main'>
+        <div class='verifica'>
+          <h3>Hola ::nombre::!</h3>
+          <p>Gracias por crear tu cuenta, da clic en el siguiente bot&oacute;n para verificar tu cuenta de correo.</p>
+          <strong><a href='::enlace::'>Clic aqu&iacute;</a></strong>
+          <p>o copia el siguiente enlace en tu navegador</p>
+          <strong><a href='::enlace::'>::enlace::</a></strong>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

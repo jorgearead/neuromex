@@ -7,7 +7,7 @@
         <div class="alert alert-success">
           <h1>Su cuenta ha sido verificada con exito.</h1>
           <p>En un momento se iniciar&aacute; sesi&oacute;n</p>
-          <script> var CLIID = <?=$CUENTA['cli']['cli_id']?>;</script>
+          <script> var CLIID = <?=$CUENTA['cli']['customer_id']?>;</script>
         </div>
       </div>
     </div>

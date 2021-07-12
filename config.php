@@ -41,7 +41,7 @@ switch ($URL) {
     case 'crear-cuenta':
         $TITLE = "Crear cuenta";
         break;
-    case 'cuenta-verificada':
+    case 'vireficar-cuenta':
         $TITLE = "Cuenta Verificada";
         break;
     default:
