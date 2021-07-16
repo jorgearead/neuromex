@@ -4,7 +4,7 @@
     </div>
     <?php foreach($PRODUC as $P): ?>
         <?php if($P['prod_status']==1 ){?>
-            <div class="col-12 col-sm-12 col-md-4 col-xl-4 p-5">
+            <div class="col-12 col-sm-12 col-md-3 col-xl-3 p-5">
 
                 <div class="producto">
                     <div class="row">
@@ -14,16 +14,16 @@
                         <div class="col-12">
                             <h5><?=$P['prod_name']?><br>
                             <p>
-                            <?php if($P['prod_offer_price']>0) {
-                                echo 'De <s>'.$P['prod_price'].'</s> a '.$P['prod_offer_price'];
-                            }else{
-                                echo $P['prod_price'];
-                            }?>
+                                <?php if($P['prod_offer_price']>0) {
+                                    echo 'De <s>&#36;'.$P['prod_price'].'</s> a &#36;'.$P['prod_offer_price'];
+                                }else{
+                                    echo '&#36;'.$P['prod_price'];
+                                }?>
                             </p>
                             </h5>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-xl-5">
-                            <a href="#" class="btn boton-producto ion-ios-cart agregar-carrito" data-id="<?=$P['prod_id']?>"></a>
+                            <button href="#" class="btn boton-producto ion-ios-cart agregar-carrito" data-id="<?=$P['prod_id']?>"></button>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-xl-7">
                             <a href="<?=$URLORIGEN?>producto/<?=$P['prod_url']?>">

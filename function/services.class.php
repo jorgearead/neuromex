@@ -66,8 +66,7 @@ class Servicios extends DBManager {
     }
     return $MENU;
   }
-*/
-/*
+
   public function getServicios() {
     $SQL = "SELECT serv_nombre, serv_url FROM tbl_servicios ORDER BY serv_orden ASC";
     $RET = $this->Consultar($SQL);

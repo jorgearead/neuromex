@@ -12,6 +12,29 @@ $(function() {
             $("select[name='marca']").html(response);
         }
     );
+    $(document).on("change","select[name='categoria[]']", function() {
+        let idc = $(this).val();
+        var parent = $(this).parent();
+        var next = null;
+    
+        while( $(this).next('select').length ){
+          $(this).next('select').remove();
+        }
+    
+        next = $('<select class="form-control" name="categoria[]"></select>');
+    
+        $.get("./control/getCates.php", { id: idc },
+          function (response) {
+            if (response != "0") {
+              parent.append(next);
+              next.html(response);
+            }
+          }
+        ).fail( function() {
+          alerta("Error","No se pudieron recuperar las categorias","error")
+        });
+    
+      });
 
     setTimeout(function() {
         $.get('./control/get.php', { id: id },
