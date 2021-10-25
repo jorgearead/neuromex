@@ -1,12 +1,12 @@
 <div class="row contenido">
     <!--Producto-->
     <div class="col-12 infor text-center">
-        <h1><?=$PROD['prod_name']?></h1>
+        <h1><?= $PROD['prod_name'] ?></h1>
     </div>
     <div class="col-12 col-sm-12 col-md-6">
         <div class="row p-5">
             <div class="col-12">
-                <img src="<?=$URLORIGEN?>img/productos/<?=$PROD['prod_img']?>" class="card-img-top" alt="<?=$PROD['prod_name']?>">
+                <img src="<?= $URLORIGEN ?>img/productos/<?= $PROD['prod_img'] ?>" class="card-img-top" alt="<?= $PROD['prod_name'] ?>">
             </div>
         </div>
         <div class="row infor text-center">
@@ -14,20 +14,20 @@
                 <h2></h2>
             </div-->
             <div class="col-12">
-                <h3>$
-                    <?php 
-                        if($PROD['prod_offer_price']>0) {
-                            echo 'De <s>'.$PROD['prod_price'].'</s> a '.$PROD['prod_offer_price'];
-                        }else{
-                            echo $PROD['prod_price'];
-                        }?>
+                <h3>&#36;
+                    <?php
+                    if ($PROD['prod_offer_price'] > 0) {
+                        echo 'De <s>' . $PROD['prod_price'] . '</s> a ' . $PROD['prod_offer_price'];
+                    } else {
+                        echo $PROD['prod_price'];
+                    } ?>
                 </h3>
             </div>
         </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 text-center p-5">
         <div class="col-12 infor title">
-            <p><?=$PROD['prod_desc']?></p>
+            <p><?= $PROD['prod_desc'] ?></p>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-xl-6 input-group p-3">
@@ -49,12 +49,12 @@
     <section id="clients" class="wow fadeInUp">
         <div class="container">
             <header class="section-header">
-            <h3>Imagenes del producto</h3>
+                <h3>Imagenes del producto</h3>
             </header>
             <div class="owl-carousel clients-carousel">
-                <?php foreach ($SLIDER as $S): ?>
-                    <a href="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" data-lightbox="portfolio" class="link-preview" title="Vista previa">
-                        <img src="<?=$URLORIGEN?>img/productos/<?=$S['ps_imagen']?>" alt="">
+                <?php foreach ($SLIDER as $S) : ?>
+                    <a href="<?= $URLORIGEN ?>img/productos/<?= $S['ps_imagen'] ?>" data-lightbox="portfolio" class="link-preview" title="Vista previa">
+                        <img src="<?= $URLORIGEN ?>img/productos/<?= $S['ps_imagen'] ?>" alt="">
                     </a>
                 <?php endforeach; ?>
             </div>
@@ -76,12 +76,14 @@
                     </h2>
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <center><?php if(empty($DOCS)){echo '<p class="texto-gen m-0 p-0">No hay documentos</p>';} ?></center>
-                    <?php foreach ($DOCS as $D): ?>
+                    <center><?php if (empty($DOCS)) {
+                                echo '<p class="texto-gen m-0 p-0">No hay documentos</p>';
+                            } ?></center>
+                    <?php foreach ($DOCS as $D) : ?>
                         <div class="card-body col-12">
-                            <p class="texto-gen m-0 p-0"><?=$D['doc_nombre']?></p>
-                            <span class="texto-gen"><?=$D['doc_file']?> ( <?=$D['doc_size']?> )</span>
-                            <a href="<?=$URLORIGEN?>docs/<?=$D['doc_file']?>" download><i class="fa fa-download"></i></a>
+                            <p class="texto-gen m-0 p-0"><?= $D['doc_nombre'] ?></p>
+                            <span class="texto-gen"><?= $D['doc_file'] ?> ( <?= $D['doc_size'] ?> )</span>
+                            <a href="<?= $URLORIGEN ?>docs/<?= $D['doc_file'] ?>" download><i class="fa fa-download"></i></a>
                         </div>
                     <?php endforeach; ?>
                 </div>

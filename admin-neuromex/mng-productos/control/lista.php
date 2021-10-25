@@ -47,7 +47,6 @@ foreach ( $RESULTADOS as $R ) {
 
   //Construir categorias
   $CATS = $PRODUCTO->getCategorias($R['prod_cat']);
-  $CATES = implode("->",$CATS);
 
   $OPC = "";
   $OPC.= '<a href="./editar.php?id='.$R['prod_id'].'"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;';
@@ -74,5 +73,3 @@ $_RETURN = array (
 
 echo json_encode($_RETURN);
 exit;
-
-?>

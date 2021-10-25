@@ -1,7 +1,7 @@
 <?php
 //Este archivo es el que se encarga de mandar a llamar tanto a las vistas(home,nosotros,etc.)
 
-$URLORIGEN = "http://localhost/neuro/";
+$URLORIGEN = "http://localhost/neuromex/";
 //$URLORIGEN = "http://prueba.neuromex.com.mx/";
 
 $TITLE = "";

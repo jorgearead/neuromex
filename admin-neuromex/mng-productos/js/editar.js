@@ -133,8 +133,8 @@ $(document).on("click", ".fa-pencil", function() {
             } else {
                 form.find("input[name='privado']").prop("checked", false);
             }
-            form.find("input[name='documento']").fileinput("destroy");
-            form.find("input[name='documento']").fileinput({
+            form.find("input[name='documento[]']").fileinput("destroy");
+            form.find("input[name='documento[]']").fileinput({
                 language: 'es',
                 overwriteInitial: true,
                 showUpload: false,
